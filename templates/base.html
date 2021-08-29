@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django</title>
+</head>
+<style>
+    body{
+        background-color: rgb(222, 253, 151);
+        font-size: large;
+        color: blue;
+    }
+    a{
+        color: brown;
+        font-size: large;
+        font-weight: 800;
+        font-family: cursive;
+    }
+</style>
+<body>
+  <header>
+    <nav>
+      <a href="{% url 'home' %}">Home</a> 
+      <br>
+      <a href="{% url 'about' %}">About</a>
+    </nav>
+  </header>
+  <main>
+      <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam possimus error suscipit ipsa maiores nemo!
+      </p>
+    {% block content %}
+    <!-- child template content goes here -->
+    {% endblock content %}
+    {% block info %}
+    <!-- child template content goes here -->
+    {% endblock info %}
+  </main>
+  <footer>
+    <p>&copy Talafha</p>
+  </footer>
+</body>
+
+</html>
